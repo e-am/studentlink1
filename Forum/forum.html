@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="forum.css">
+    <script src="material-components-web/material-components-web.js">
+    </script>
+    <link href="material-components-web/material-components-web.css" rel="stylesheet">
+    <link href="material-components-web/material-components-web-extra.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Forum</title>
+  </head>
+  <body>
+
+    <header class="mdc-toolbar">
+      <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <a href="#" id="menu-drawer" class="material-icons mdc-toolbar__icon--menu">menu</a>
+        <span class="mdc-toolbar__title">StudentLink Forum</span>
+      </section>
+    </div>
+    </header>
+    <aside class="mdc-persistent-drawer mdc-typography" id="drawer">
+      <nav class="mdc-persistent-drawer__drawer">
+      <header class="mdc-persistent-drawer__header">
+      <div class="mdc-persistent-drawer__header-content">
+        <nav id="icon-with-text-demo" class="mdc-persistent-drawer__content mdc-list">
+            <a href="#">Skola/Studier</a>
+            <a href="#">Fritid/Hobby</a>
+            <a href="#">Politik</a>
+            <a href="#">Teknik/Data</a>
+            <a href="#">Samhälle</a>
+            <a href="#">Natur</a>
+            <a href="#">Litteratur</a>
+            <a href="#">Sport</a>
+            <a href="#">Övrigt</a>
+        </nav>
+      </nav>
+    </aside>
+    </div>
+  </header>
+
+    <main>
+  <div class="inlagg">
+      <div class="in-box">
+        <p id="in-box-text"></p>
+  	    <button type="button" name="button">Svara</button>
+      </div>
+      <div class="in-box2">
+        <button type="button" name="button">Svara</button>
+      </div>
+      <div class="in-box3">
+        <button type="button" name="button">Svara</button>
+      </div>
+  </div>
+  </main>
+    <script src="forum.js"></script>
+  </body>
+</html>
