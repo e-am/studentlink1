@@ -1,30 +1,190 @@
- .inlagg button {
-  background-color: gray;
-  color: white;
-  text-shadow: 0px 0px 5px black;
-  border: 2px solid black;
-  margin: 10px;
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 5px;
+h1 {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: 60px;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  margin: auto;
+  font-weight: lighter;
+}
+
+#menu-drop {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.introduction a {
+  color: black;
+}
+
+#inlagg {
+  margin-top: 5rem;
+}
+
+#new-thread {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+
+#thread-box {
+  background-color: white;
+  width: 32em;
+  margin: 15vh auto;
+  padding: 2em;
+}
+
+#new-thread form {
+  line-height: 3rem;
+  padding-left: 1em;
+  width: 29em;
+}
+
+
+
+
+
+#new-thread input {
+  font-size: 20px;
+}
+
+#new-thread textarea {
+  width: 100%;
+}
+
+#close-box {
+  float: right;
+  margin-right: 1em;
+  font-size: 24px;
+}
+
+.introduction nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: baseline;
+}
+
+#nav-text a:hover {
+  color: hotpink;
 }
 
 #drawer {
-  margin-top: 60px;
+  position: fixed;
+  left: 10px;
+  font-weight: lighter;
+  top: 5px;
+  z-index: 5;
 }
 
+.mdc-temporary-drawer {
+  overflow-y: scroll;
+}
 
-#icon-with-text-demo a {
+.mdc-temporary-drawer header {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+
+.mdc-temporary-drawer__content a {
+  text-decoration: none;
+  color: grey;
   display: block;
-  color: black;
-
+  margin: 10px;
 }
 
-button:hover {
-  background-color: red;
+#drawer:hover {
+  color: darkgrey;
 }
 
-.inlagg div {
+#glaset {
+  padding-left: 5px;
+}
+
+.sok {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#addanchor {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: 17px;
+  float: right;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#addanchor:hover {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.divclass {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
   border: 2px solid black;
-  width: 50%;
+  overflow: hidden;
+}
+
+
+.divclass button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 5px;
+  border: 2px 0px 0px black;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: orange;
+}
+
+.divclass button:hover {
+  background-color: red;
+  color: white;
+}
+
+.divclass3 {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  border: 1px solid black;
+}
+
+.divclass p {
+  margin: 10px;
+}
+.divclass2 {
+  clear: left;
+}
+
+#svar-text {
+  margin: auto;
+}
+
+@media query and screen and (max-width 5em) {
+
 }

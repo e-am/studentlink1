@@ -1,58 +1,107 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>StudentLinks Forum</title>
     <link rel="stylesheet" href="forum.css">
-    <script src="material-components-web/material-components-web.js">
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="material-components-web/material-components-web.js"></script>
+    <script src="forum.js"></script>
     <link href="material-components-web/material-components-web.css" rel="stylesheet">
     <link href="material-components-web/material-components-web-extra.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <title>Forum</title>
   </head>
   <body>
-
-    <header class="mdc-toolbar">
-      <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <a href="#" id="menu-drawer" class="material-icons mdc-toolbar__icon--menu">menu</a>
-        <span class="mdc-toolbar__title">StudentLink Forum</span>
-      </section>
+    <div class="head1">
+        <h1>StudentLink's Forum</h1>
     </div>
-    </header>
-    <aside class="mdc-persistent-drawer mdc-typography" id="drawer">
-      <nav class="mdc-persistent-drawer__drawer">
-      <header class="mdc-persistent-drawer__header">
-      <div class="mdc-persistent-drawer__header-content">
-        <nav id="icon-with-text-demo" class="mdc-persistent-drawer__content mdc-list">
-            <a href="#">Skola/Studier</a>
-            <a href="#">Fritid/Hobby</a>
-            <a href="#">Politik</a>
-            <a href="#">Teknik/Data</a>
-            <a href="#">Samhälle</a>
-            <a href="#">Natur</a>
-            <a href="#">Litteratur</a>
-            <a href="#">Sport</a>
-            <a href="#">Övrigt</a>
+    <div class="introduction">
+      <nav>
+        <a href="#"><i id="menu-drop" class="material-icons md-36">menu</i></a>
+        <div class="head-name">
+          <div class="sok">
+            <div class="mdc-textfield">
+              <input type="text" id="my-textfield" class="mdc-textfield__input" placeholder="Sök:">
+              <label class="mdc-textfield__label" for="my-textfield"></label>
+            </div>
+            <a href="#"><i id="glaset" class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div id="add-sub">
+        <a id="addanchor" href="#"><span>Lägg till ett inlägg!</span></a>
+        </div>
+
+      </nav>
+
+    </div>
+    <aside class="mdc-temporary-drawer mdc-typography" id="drawer-drop">
+      <nav  class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header">
+          <div class="mdc-temporary-drawer__header-content">
+            Kategorier
+          </div>
+        </header>
+        <nav id="nav-text"  class="mdc-temporary-drawer__content mdc-list">
+          <a href="#">Skola</a>
+          <a href="#">Arbete</a>
+          <a href="#">Boende</a>
+          <a href="#">Hobby</a>
+          <a href="#">Teknik/Data</a>
+          <a href="#">Litteratur</a>
+          <a href="#">Sport</a>
+          <a href="#">Natur</a>
+          <a href="#">Samhälle</a>
+          <a href="#">Kroppen</a>
         </nav>
       </nav>
     </aside>
+
+    <div id="new-thread">
+      <div id="thread-box">
+        <i id="close-box" class="fa fa-times" aria-hidden="true"></i>
+        <h2>Skapa en nytt inlägg</h2>
+        <p>Bestäm vad du vill diskutera! Välj kategori och rubrik, skriv dina tankar/frågor/annat och invänta svaren från alla andra studenter här ute!</p>
+        <form id="form" action="forum.html" method="post">
+          <h3>Kategori</h3>
+          <input id="skola" type="checkbox" name="Skola" value="skola">Skola
+          <input id="arbete" type="checkbox" name="Arbete" value="arb">Arbete
+          <input id="bo" type="checkbox" name="Boende" value="bo">Boende
+          <input id="hobby" type="checkbox" name="Hobby" value="hobby">Hobby
+          <input id="tekdat" type="checkbox" name="TekDat" value="tek">Teknik/Data
+          <input type="checkbox" name="Litt" value="litt">Litteratur
+          <input type="checkbox" name="Sport" value="spo">Sport
+          <input type="checkbox" name="Natur" value="nat">Natur
+          <input type="checkbox" name="Sam" value="sam">Samhälle
+          <input type="checkbox" name="Kroppen" value="kroppen">Kroppen
+          <p>Ange rubrik för inlägget:</p>
+          <textarea id="forum-rubrik" name="name" rows="1" cols="60"></textarea>
+          <div class="text-area">
+            <legend>Forumpost</legend>
+            <textarea id="content-post" name="name" rows="8" cols="80" placeholder="Skriv här:"></textarea>
+          </div>
+          <button type="button" id="posta">Posta</button>
+        </form>
+      </div>
     </div>
-  </header>
 
     <main>
-  <div class="inlagg">
-      <div class="in-box">
-        <p id="in-box-text"></p>
-  	    <button type="button" name="button">Svara</button>
+      <div id="inlagg">
+        <div class="pre-made">
+          <div class="divclass">
+            <h3>Mobiltips</h3>
+            <p>Hej StudentLink. Jag har lite funderingar över vilken mobil jag ska köpa. En Apple eller Android? Alla mina vänner har Apple, men jag är ingen mainstreamperson och tänker att det kanske skulle vara bättre då med Android, eller?</p>
+            <button class="svara" type="button" name="button">Svara</button>
+          </div>
+          <div class="divclass">
+            <h3>Tjenare StudentLink, har ni bra tips på Haburgerhak?</h3>
+            <p>Hallå allihopa! Första gången ute i GBG och jag och polarna funderar på att dra och käka på något haburgerhak. Känner ni till något bra ställe? Har hört att Göteburgare ska vara rätt nice! Men det kanske finns flera lite mindre, trevligare ställen? Svara snabbt, då detta gäler endast ikväll! Åker nämligen imorn.</p>
+            <button class="svara" type="button" name="button">Svara</button>
+          </div>
+        </div>
+
       </div>
-      <div class="in-box2">
-        <button type="button" name="button">Svara</button>
-      </div>
-      <div class="in-box3">
-        <button type="button" name="button">Svara</button>
-      </div>
-  </div>
-  </main>
-    <script src="forum.js"></script>
+    </main>
+
+
   </body>
 </html>
